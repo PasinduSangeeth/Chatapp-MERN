@@ -1,7 +1,7 @@
 import User from '../models/user.model.js';
 import bcrypt from 'bcrypt.js';
 export const signup = async (req, res) => {
-    const {fullname,email,password}=req.body;}
+    const {fullname,email,password}=req.body;
     try {
         //hash password
         if (password.length < 6) {
@@ -23,7 +23,9 @@ export const signup = async (req, res) => {
 
 } catch (error) {
         
+
     };
+};
 };
 
 export const login = (req, res) => {
