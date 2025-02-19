@@ -1,11 +1,9 @@
 import React from 'react'
 
-const Navbar = () => {
+export default function SignUpPage() {
   return (
     <div>
-      Navbar
+      
     </div>
   )
 }
-
-export default Navbar;
