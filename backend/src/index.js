@@ -5,7 +5,7 @@ import dotenv from 'dotenv';
 import {connectDB} from './lib/db.js';
 import cookieParser from 'cookie-parser';
 import messageRoutes from './routes/message.route.js';
-
+import cors from 'cors';
 // Load environment variables from.env file
 dotenv.config();
 
@@ -14,6 +14,12 @@ const app = express();
 const PORT =process.env.PORT||5002 ;
 app.use(express.json());
 app.use(cookieParser()); // Parse cookies to req.cookies object
+app.use(cors(
+    {
+        origin: "http://localhost:5173",
+        credentials: true,
+    }
+)); 
 app.use("/api/auth",authRoutes);
 app.use("/api/message",messageRoutes);
 
