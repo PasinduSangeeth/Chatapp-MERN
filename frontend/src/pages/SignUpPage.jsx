@@ -120,6 +120,12 @@ const SignUpPage = () => {
           </div>
         </div>
       </div>
+      {/* Right side of the form */}
+      <AuthImagePattern
+        title="Join our community "
+        subtitle="Connect with friends,share comments, adn stay in touch with your loved ones."
+        
+      />
     </div>
   );
 
